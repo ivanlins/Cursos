@@ -34,6 +34,7 @@ header#cabecalho img#icone{
     position: absolute;
     left: 960px;
     top: 83px;
+    transition: 1s;
 }
 
 header#cabecalho{
@@ -106,11 +107,13 @@ nav#menu li{
     background-color: rgb(190, 188, 188);
     padding: 10px;
     margin: 4px;
-    transition: background-color 0.5s;
+    transition: 0.5s;
+    
     
 }
 nav#menu li:hover{
     background-color: #606060;
+    transition: 1s;
 }
 
 nav#menu h1{
@@ -255,4 +258,9 @@ table#tabelaspec caption span{
     color: #888888;
     font-size: 8pt;
     margin-top: 10px;
+}
+
+img#icone :hover{
+
+    transition: 0.5s;
 }

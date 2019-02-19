@@ -22,6 +22,6 @@ alter table pessoas
 change column profissao prof varchar(20) not null default'';
 
 alter table pessoas
-rename to cursoCurso;
+rename to usuarios;
 
 select * from pessoas;

@@ -1,19 +1,8 @@
-class MensagemView{
+class MensagemView extends View<string> {
 
-    private _elemento: Element
+    template(model: string) {
 
-    constructor(seletor: string){
-        this._elemento = document.querySelector(seletor);
-    }
-
-    update(model: string){
-
-        this._elemento.innerHTML = this.template(model);
-    }
-
-    template(model: string){
-
-        return`
+        return `
             <p class="alert alert-info">${model}</p>
         `
     }

@@ -1,4 +1,4 @@
-class Negociacoes {
+class Negociacoes  {
     
     private _negociacoes: Negociacao[] = [];
 

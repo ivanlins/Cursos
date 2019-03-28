@@ -1,4 +1,4 @@
-abstract class View<T> {
+export abstract class View<T> {
 
     private _elemento: JQuery;
 
@@ -14,4 +14,5 @@ abstract class View<T> {
 
     abstract template(model: T): string;
 }
+
 

@@ -1,7 +1,7 @@
 System.register(["../views/index", "../models/index"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var index_1, index_2, NegociacaoController;
+    var index_1, index_2, NegociacaoController, DiaDaSemana;
     return {
         setters: [
             function (index_1_1) {
@@ -21,16 +21,35 @@ System.register(["../views/index", "../models/index"], function (exports_1, cont
                     this._inputQuantidade = $('#quantidade');
                     this._inputValor = $('#valor');
                     this._negociacoesView.update(this._negociacoes);
+                    let temCarteira;
+                    temCarteira = null;
                 }
                 adiciona(event) {
                     event.preventDefault();
-                    const negociacao = new index_2.Negociacao(new Date(this._inputData.val().replace(/-/g, ',')), parseInt(this._inputQuantidade.val()), parseFloat(this._inputValor.val()));
+                    let data = new Date(this._inputData.val().replace(/-/g, ','));
+                    if (!this._ehDiaUtil(data)) {
+                        this._mensagemView.update('somente negociações em dias uteis pf');
+                        return;
+                    }
+                    const negociacao = new index_2.Negociacao(data, parseInt(this._inputQuantidade.val()), parseFloat(this._inputValor.val()));
                     this._negociacoes.adiciona(negociacao);
                     this._negociacoesView.update(this._negociacoes);
                     this._mensagemView.update('Negociação adicionada com sucesso!');
                 }
+                _ehDiaUtil(Data) {
+                    return Data.getDay() != DiaDaSemana.Sabado && Data.getDay() != DiaDaSemana.Domingo;
+                }
             };
             exports_1("NegociacaoController", NegociacaoController);
+            (function (DiaDaSemana) {
+                DiaDaSemana[DiaDaSemana["Domingo"] = 0] = "Domingo";
+                DiaDaSemana[DiaDaSemana["Segunda"] = 1] = "Segunda";
+                DiaDaSemana[DiaDaSemana["Terca"] = 2] = "Terca";
+                DiaDaSemana[DiaDaSemana["Quarta"] = 3] = "Quarta";
+                DiaDaSemana[DiaDaSemana["Quinta"] = 4] = "Quinta";
+                DiaDaSemana[DiaDaSemana["Sexta"] = 5] = "Sexta";
+                DiaDaSemana[DiaDaSemana["Sabado"] = 6] = "Sabado";
+            })(DiaDaSemana || (DiaDaSemana = {}));
         }
     };
 });

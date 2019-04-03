@@ -4,6 +4,7 @@ import { domInject, throttle } from '../helpers/decorators/index';
 import { NegociacaoParcial } from '../models/NegociacaoParcial';
 import { NegociacaoService } from '../services/index';
 
+
 let timer = 0;
 
 export class NegociacaoController {
@@ -22,6 +23,7 @@ export class NegociacaoController {
     private _mensagemView = new MensagemView('#mensagemView');
 
     private _service = new NegociacaoService();
+    
 
 
     constructor() {
@@ -46,9 +48,7 @@ export class NegociacaoController {
         );
 
         this._negociacoes.adiciona(negociacao);
-
         this._negociacoesView.update(this._negociacoes);
-
         this._mensagemView.update('Negociação adicionada com sucesso!');
 
 
@@ -61,17 +61,16 @@ export class NegociacaoController {
 
     @throttle()
     importaDados() {
-
-        function isOk(res: Response) {
-
-            if (res.ok) {
-                return res;
-            } else {
-                throw new Error(res.statusText);
-            }
-        }
             this._service
-                .obterNegociacoes(isOk)
+                .obterNegociacoes(res =>{
+                    
+                    if (res.ok) {
+                        return res;
+                    } else {
+                        throw new Error(res.statusText);
+                    }
+
+                })
                 .then((negociacoes: Negociacao[])  => {
 
                     negociacoes.forEach(negociacao =>

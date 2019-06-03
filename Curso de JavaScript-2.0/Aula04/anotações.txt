@@ -1,0 +1,74 @@
+<COMANDOS JAVASCRIPT>
+
+window.alert('xxx'){ Utilizado para criar um alerta(pop-up) na tela.}
+
+window.prompt('Qual seu nome'){Utilizado para criar uma caixa de digitação(pop-up) na tela}
+
+window.confirm('Quer falar sua idade?'){Utilizado para criar um alerta de confirmação(pop-up) de "ok ou cancelar"}
+
+<IDENTIFICADORES>
+   Definições de variáveis
+	
+	Podem começãr com: letras, $ ou _.
+	Não podem começar com números.
+	É possivel usar letras ou números.
+	É possível usar acentos e símbolos.
+	Não podem conter espaços.
+	Não podem ser palavras reservadas(let, var, alert, etc...).
+
+	"Dicas"
+	   Maiúsculas e minúsculas fazem diferença.
+	   Tente escolher nomes coerentes para as variáveis.
+	   Não se torne um 'programador alfabeto' ou um 'programador contador'
+---------------------------------------------------------------------------------------------------------------------------
+"TIPOS DE VARIAVEIS"
+   number
+      -infinity
+      -NaN
+   string
+   boolean
+   null
+   undefined
+   object
+      -Array
+   function
+
+<NODE.JS>
+   Alguns comandos iniciais
+
+	É possivel declarar variáveis e alterar as mesmas sobrepondo o valor anterior.
+
+---------------------------------------------------------------------------------------------------------------------------
+<TRATAMENTO DE DADOS, UTILIZANDO VALORES RECEBIDOS>
+
+
+	var nome = window.prompt('Qual seu nome')//vai perguntar o nome...
+        alert('É um grande prazer te conhecer, ' + nome + '!')
+
+	--Utiliza-se o sinal de '+' para concatenar um valor à uma variavel.
+	--Para criar uma variácel basta digitar: var NOMEVARIAVEL
+	--Pode se criar a variavel e em seguida a sua logica daquela variavel ex: 
+	  -var n1 = window.prompt('Digite um número: ')
+	  -var n2 = window.prompt('Digite um número: ')
+	  -var s = alert('o resultado da soma é: ' n1 + n2)
+	     		---'ATENÇÃO'---
+			---'ATENÇÃO'---
+			---'ATENÇÃO'---
+	O PROMP TRATA OS VALORES RECEBIDOS COMO "STRING", PORTANTO QUANDO FOR UTILIZAR É NECESSÁRIO A CONVERÇÃO/DECLARAÇÃO
+   DO TIPO DA VARIÁVEL EX:  --var n1 = Number.parseFloat (window.prompt('Digite um número: '))
+			    --var n2 = Number.parseFloat (window.prompt('Digite um número: '))
+
+					{ [String -> Número]
+					        Number.parseInt (window.prompt('Digite um número: ')) ou
+						Number.parseFloat (window.prompt('Digite um número: '))
+								----------------				
+						LEMBRANDO QUE O JavaScript É CASE SENSITIVE!!! 
+
+						Para deixar com que o próprio JavaScript diferenciar oque é Float do que é Int pode-se apenas usar: 
+							Number(window.prompt('Digite um número: ')); Aonde o JS vai decidir oque é oque.}
+
+					{[Número -> String]
+						String(QUALQUERVARIALVEL) ou QUALQUERVARIAVEL.toString
+								-----------------
+						LEMBRANDO QUE O JavaScript É CASE SENSITIVE!!!}
+

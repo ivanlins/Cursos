@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+
+            <style>
+                body{
+                    background-color: rgb(0, 184, 168);
+                    font-size: 24pt;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+                    color: #000;
+                    text-align: center;
+                    }
+            </style>
+        </head>
+        <body>
+            
+            <script>
+                var nome = String(window.prompt('Olá! por gentileza informe o seu nome: '))
+                var salario = Number(window.prompt('Digite o valor total do seu salário: '))
+                var VR = Number(window.prompt('Por favor digite o valor do seu Vale-Refeição: '))
+                var valorTotal = (salario + VR)
+                document.write(`Olá ${nome}, o seu salário é de: ${salario}<br/>`)
+                document.write(`A soma do seu salário com o seu VR é de : ${valorTotal.toLocaleString('pt-BR',  {style: 'currency', currency: 'BRL'})} <br/>`)
+                document.write(`O seu nome totalmente em Maiúsculo fica: ${nome.toUpperCase()} <br/>`)
+                document.write(`O seu nome totalmente em Minúsculo fica: ${nome.toLowerCase()} <br/>`)
+            </script>
+        </body>
+    </html>

@@ -1,25 +1,25 @@
-<COMANDOS JAVASCRIPT>
+ï»¿<COMANDOS JAVASCRIPT>
 
 window.alert('xxx'){ Utilizado para criar um alerta(pop-up) na tela.}
 
-window.prompt('Qual seu nome'){Utilizado para criar uma caixa de digitação(pop-up) na tela}
+window.prompt('Qual seu nome'){Utilizado para criar uma caixa de digitaï¿½ï¿½o(pop-up) na tela}
 
-window.confirm('Quer falar sua idade?'){Utilizado para criar um alerta de confirmação(pop-up) de "ok ou cancelar"}
+window.confirm('Quer falar sua idade?'){Utilizado para criar um alerta de confirmaï¿½ï¿½o(pop-up) de "ok ou cancelar"}
 
 <IDENTIFICADORES>
-   Definições de variáveis
+   DefiniÃ§Ãµes de variaveis
 	
-	Podem começãr com: letras, $ ou _.
-	Não podem começar com números.
-	É possivel usar letras ou números.
-	É possível usar acentos e símbolos.
-	Não podem conter espaços.
-	Não podem ser palavras reservadas(let, var, alert, etc...).
+	Podem comeÃ§ar com: letras, $ ou _.
+	NÃ£o podem comeÃ§ar com nÃºmeros.
+	Ã‰ possivel usar letras ou nÃºmeros.
+	Ã‰ possÃ­vel usar acentos e sÃ­mbolos.
+	NÃ£o podem conter espaÃ§os.
+	NÃ£o podem ser palavras reservadas(let, var, alert, etc...).
 
 	"Dicas"
-	   Maiúsculas e minúsculas fazem diferença.
-	   Tente escolher nomes coerentes para as variáveis.
-	   Não se torne um 'programador alfabeto' ou um 'programador contador'
+	   MaiÃºsculas e minÃºsculas fazem diferenÃ§a.
+	   Tente escolher nomes coerentes para as variÃ¡veis.
+	   NÃ£o se torne um 'programador alfabeto' ou um 'programador contador'
 ---------------------------------------------------------------------------------------------------------------------------
 "TIPOS DE VARIAVEIS"
    number
@@ -36,39 +36,91 @@ window.confirm('Quer falar sua idade?'){Utilizado para criar um alerta de confir
 <NODE.JS>
    Alguns comandos iniciais
 
-	É possivel declarar variáveis e alterar as mesmas sobrepondo o valor anterior.
+	Ã‰ possivel declarar variaveis e alterar as mesmas sobrepondo o valor anterior.
 
 ---------------------------------------------------------------------------------------------------------------------------
 <TRATAMENTO DE DADOS, UTILIZANDO VALORES RECEBIDOS>
 
 
 	var nome = window.prompt('Qual seu nome')//vai perguntar o nome...
-        alert('É um grande prazer te conhecer, ' + nome + '!')
+        alert('Ã‰ um grande prazer te conhecer, ' + nome + '!')
 
-	--Utiliza-se o sinal de '+' para concatenar um valor à uma variavel.
-	--Para criar uma variácel basta digitar: var NOMEVARIAVEL
+	--Utiliza-se o sinal de '+' para concatenar um valor Ã¡ uma variavel.
+	--Para criar uma variacel basta digitar: var NOMEVARIAVEL
 	--Pode se criar a variavel e em seguida a sua logica daquela variavel ex: 
-	  -var n1 = window.prompt('Digite um número: ')
-	  -var n2 = window.prompt('Digite um número: ')
-	  -var s = alert('o resultado da soma é: ' n1 + n2)
-	     		---'ATENÇÃO'---
-			---'ATENÇÃO'---
-			---'ATENÇÃO'---
-	O PROMP TRATA OS VALORES RECEBIDOS COMO "STRING", PORTANTO QUANDO FOR UTILIZAR É NECESSÁRIO A CONVERÇÃO/DECLARAÇÃO
-   DO TIPO DA VARIÁVEL EX:  --var n1 = Number.parseFloat (window.prompt('Digite um número: '))
-			    --var n2 = Number.parseFloat (window.prompt('Digite um número: '))
+	  -var n1 = window.prompt('Digite um nÃºmero: ')
+	  -var n2 = window.prompt('Digite um nÃºmero: ')
+	  -var s = alert('o resultado da soma Ã©: ' n1 + n2)
+	     		---'ATENÃ‡ÃƒO'---
+			---'ATENÃ‡ÃƒO'---
+			---'ATENÃ‡ÃƒO'---
+	O PROMP TRATA OS VALORES RECEBIDOS COMO "STRING", PORTANTO QUANDO FOR UTILIZAR Ã© NECESSÃRIO A CONVERSÃƒO/DECLARAÃ‡ÃƒO
+   DO TIPO DA VARIAVEL EX:  --var n1 = Number.parseFloat (window.prompt('Digite um nÃºmero: '))
+			    --var n2 = Number.parseFloat (window.prompt('Digite um nÃºmero: '))
 
-					{ [String -> Número]
-					        Number.parseInt (window.prompt('Digite um número: ')) ou
-						Number.parseFloat (window.prompt('Digite um número: '))
+					{ [String -> NÃºmero]
+					        Number.parseInt (window.prompt('Digite um nÃºmero: ')) ou
+						Number.parseFloat (window.prompt('Digite um nÃºmero: '))
 								----------------				
-						LEMBRANDO QUE O JavaScript É CASE SENSITIVE!!! 
+						LEMBRANDO QUE O JavaScript Ã‰ CASE SENSITIVE!!! 
 
-						Para deixar com que o próprio JavaScript diferenciar oque é Float do que é Int pode-se apenas usar: 
-							Number(window.prompt('Digite um número: ')); Aonde o JS vai decidir oque é oque.}
+						Para deixar com que o prÃ³prio JavaScript diferenciar oque Ã© Float do que Ã© Int pode-se apenas usar: 
+							Number(window.prompt('Digite um nÃºmero: ')); Aonde o JS vai decidir oque Ã© oque.}
 
-					{[Número -> String]
+					{[NÃºmero -> String]
 						String(QUALQUERVARIALVEL) ou QUALQUERVARIAVEL.toString
 								-----------------
-						LEMBRANDO QUE O JavaScript É CASE SENSITIVE!!!}
+						LEMBRANDO QUE O JavaScript Ã‰ CASE SENSITIVE!!!}
+
+---------------------------------------------------------------------------------------------------------------------------
+<FORMATANDO DE STING'S>
+
+`REPRESENTAÃ‡ÃƒO`:
+
+	var s = 'JavaScript'
+
+		s.length // delimita quantos caracteres a variï¿½vel recebe ex: 
+			--s.length(5)
+				s = 5 caracteres
+		s.toUpperCase() // tudo para 'MAIï¿½SCULAS'
+		s.toLowerCase() // tudo para 'minï¿½sculas'
+
+<FORMATANDO NÃšMEROS>
+
+`REPRESENTAÃ‡ÃƒO`:
+	
+	var n1 = 1543.5
+	n1.toFixed(2) // Determina quantos espaÃ§os iram ter apÃ³s a virgula (na programaÃ§Ã£o virgula Ã© = .)
+
+	n1.toFixed(2).replace('.', ',') // o .replace() Ã© utilizado para trocar uma coisa por outra. 
+	___neste exemplo para trocar o ponto por virgula.
+	n1.toLocaleString('pt-BR',  {style: 'currency', currency: 'BRL'}) // Ã© utilizado para formatar 1 nÃºmero para 
+	___o formato de moeda('BRL' = REAL; 'USD' = DOLAR; 'EUR' = EURO)
+	
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+<OPERADORES DE JS> 
+
+	+  = ADIÃ‡ÃƒO
+	-  = SUBTRAÃ‡ÃƒO
+	*  = MULTIPLICAÃ‡ÃƒO
+	/  = DIVISÃ‡O
+	%  = RESTO DA DIVISÃ‡O
+	** = POTENCIAÃ‡ÃƒO 
+	
+   CUIDADO! Na programaÃ§Ã£o assim como na vida real existe uma coisa chamada de precendencia de operadores
+
+EX: 
+ 5 + 3 / 2 = 6.5 ()
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			ORDEM DE PRECEDENCIA Ã©: 
+			Parenteses ()
+			PotenciaÃ§Ã£o **
+			DivisÃ£o / , e MultiplicaÃ§Ã£o * e Resto da divisÃ£o %.
+			AdiÃ§Ã£o + e SubtraÃ§Ã£o - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 

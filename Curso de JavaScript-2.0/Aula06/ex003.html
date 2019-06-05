@@ -8,20 +8,22 @@
     <title>Primeiro Programa</title>
     <style>
         body {
-            background-color: #f1f1f1;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #e0e0e0;
+            background-color: #6c9bf3;/* */
         }
     </style>
 </head>
 
 <body>
-    <h1>Olá Mundo</h1>
+    <h1>O resultado foi exibido</h1><!-- -->
     <p>GG</p>
 
     <script>
-        var n1 = Number.parseFloat (window.prompt('Digite um número: '))//pergunta um número distinto
-        var n2 = Number.parseFloat (window.prompt('Digite um número: '))//pergunta um número distinto
+        var n1 = Number(window.prompt('Digite um número: '))//pergunta um número distinto
+        var n2 = Number(window.prompt('Digite outro número: '))//pergunta um número distinto
         var soma = n1 + n2
-        window.alert(`A soma entre ${n1} e ${n2} é igual`)
+        window.alert(`A soma entre ${n1} e ${n2} é igual a: ${soma}`)
     </script>
 </body>
 

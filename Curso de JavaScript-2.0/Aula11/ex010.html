@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detran</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            border: dashed 1px #000;
+            line-height: 20px;
+
+        }
+        input{
+            width: 70px;
+            margin-bottom: 20px;
+            background-color: #eee;
+            box-shadow: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Digite aqui o limite de velocidade: <input type="number" name="limite" id="limite"><br/>
+    Velocidade do veiculo: <input type="number" name="velo" id="velo"> Km/h &nbsp;
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div class="result">
+
+    </div>
+
+    
+
+    <script>
+        var txtv = window.document.getElementById('velo')
+        var result = window.document.querySelector('div.result')
+        var limvel = window.document.getElementById('limite')
+
+        function calcular(){
+            var limite = Number(limvel.value)
+            var vel = Number(txtv.value)
+            result.innerHTML = `<p>Sua velocidade atual é de ${vel}Km/h</p>`
+            //if(vel > limite){
+                result.innerHTML += `Você está acima do limite de velocidade de ${limite} portanto será multado!`
+            //}
+            result.innerHTML += `<p>Dirija sempre com cuidado</p>`
+        }
+
+    </script>
+</body>
+</html>

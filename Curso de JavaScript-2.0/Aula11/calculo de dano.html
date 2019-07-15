@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yu-Gi-Oh!</title>
+
+
+    <style>
+        body{
+            font-family: 'Cinzel', serif;
+            text-align: center;
+        }
+        body form fieldset p{
+            border: dashed 1px #000;
+            padding: 15px 5px;
+        }
+        body form fieldset{
+            display: block;
+            margin: 20px auto;
+        }
+        form{
+            border: 1px solid #000;
+            padding: 15px;
+            background-color: rgb(152, 243, 243);
+            width: 470px;
+        }
+
+
+        
+        input{
+            background-color: #f0f0f0;
+            line-height: 20px; 
+        }
+    
+    </style>
+</head>
+<body>
+
+    <form>
+            <fieldset id="usuario1"><legend>Dados do Duelista</legend>
+                <p>Digite o nome do Duelista: <input placeholder="Yugi Muto" type="text" size="20" maxlength="25" name="duelista1" id="duelista1"/></p>
+                <p>Qual o tipo do Baralho: <input placeholder="Mago Negro, Exodia, etc..." type="text" size="20" maxlength="25" name="baralho1" id="baralho1"/></p>
+            </fieldset>
+            <fieldset id="usuario2"><legend>Dados do Duelista</legend>
+                <p>Digite o nome do Duelista: <input placeholder="Seto Kaiba" type="text" name="duelista2" id="duelista2"/></p>
+                <p>Qual o tipo do Baralho: <input placeholder="Dragão Branco, Cyber, etc..." type="text" name="baralho2" id="baralho2"/></p>
+            </fieldset>
+            <input type="button" value="Enviar Dados" onclick="Duelista()"/>
+
+    </form>
+
+    <div class="duelostart">
+
+    </div>
+
+    <script>
+        var user01 = window.document.getElementById('duelista1')
+        var user02 = window.document.getElementById('duelista2')
+        var retorno = window.document.getElementById('duelostart')
+
+        function Duelo(){
+            var limite = toString(user01.value)
+            var vel = toString(user02.value)
+            result.innerHTML = `<p>Sua velocidade atual é de ${vel}Km/h</p>`
+            result.innerHTML += `Você está acima do limite de velocidade de ${limite} portanto será multado!`
+            result.innerHTML += `<p>Dirija sempre com cuidado</p>`
+        }
+
+    </script>
+</body>
+</html>

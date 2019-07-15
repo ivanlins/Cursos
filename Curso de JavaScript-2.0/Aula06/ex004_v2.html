@@ -16,14 +16,25 @@
                     }
             </style>
         </head>
-        <body>
+        <body bgcolor="#0a9">
             
             <script>
                 var nome = String(window.prompt('Olá! por gentileza informe o seu nome: '))
                 var salario = Number(window.prompt('Digite o valor total do seu salário: '))
+                while (salario == 0){
+                    window.alert("o salario não pode ser igual a 0")
+                    var salario = Number(window.prompt('Digite o valor total do seu salário: '))
+                }
+
                 var VR = Number(window.prompt('Por favor digite o valor do seu Vale-Refeição: '))
+                while (VR == 0){
+                    window.alert("o VR não pode ser igual a 0")
+                    var VR = Number(window.prompt('Por favor digite o valor do seu Vale-Refeição: '))}
+
                 var valorTotal = (salario + VR)
+
                 document.write(`Olá ${nome}, o seu salário é de: ${salario}<br/>`)
+                document.write(`E também o seu VR é de: ${VR}<br/>`)
                 document.write(`A soma do seu salário com o seu VR é de : ${valorTotal.toLocaleString('pt-BR',  {style: 'currency', currency: 'BRL'})} <br/>`)
                 document.write(`O seu nome totalmente em Maiúsculo fica: ${nome.toUpperCase()} <br/>`)
                 document.write(`O seu nome totalmente em Minúsculo fica: ${nome.toLowerCase()} <br/>`)

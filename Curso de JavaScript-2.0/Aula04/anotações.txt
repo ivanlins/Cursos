@@ -2,9 +2,9 @@
 
 window.alert('xxx'){ Utilizado para criar um alerta(pop-up) na tela.}
 
-window.prompt('Qual seu nome'){Utilizado para criar uma caixa de digita��o(pop-up) na tela}
+window.prompt('Qual seu nome'){Utilizado para criar uma caixa de digitação(pop-up) na tela}
 
-window.confirm('Quer falar sua idade?'){Utilizado para criar um alerta de confirma��o(pop-up) de "ok ou cancelar"}
+window.confirm('Quer falar sua idade?'){Utilizado para criar um alerta de confirmação(pop-up) de "ok ou cancelar"}
 
 <IDENTIFICADORES>
    Definições de variaveis
@@ -79,11 +79,11 @@ window.confirm('Quer falar sua idade?'){Utilizado para criar um alerta de confir
 
 	var s = 'JavaScript'
 
-		s.length // delimita quantos caracteres a vari�vel recebe ex: 
+		s.length // delimita quantos caracteres a variável recebe ex: 
 			--s.length(5)
 				s = 5 caracteres
-		s.toUpperCase() // tudo para 'MAI�SCULAS'
-		s.toLowerCase() // tudo para 'min�sculas'
+		s.toUpperCase() // tudo para 'MAIÚSCULAS'
+		s.toLowerCase() // tudo para 'minúsculas'
 
 <FORMATANDO NÚMEROS>
 

@@ -42,10 +42,10 @@
         function calcular(){
             var limite = Number(limvel.value)
             var vel = Number(txtv.value)
-            result.innerHTML = `<p>Sua velocidade atual é de ${vel}Km/h</p>`
-            //if(vel > limite){
-                result.innerHTML += `Você está acima do limite de velocidade de ${limite} portanto será multado!`
-            //}
+            result.innerHTML = `<p>Sua velocidade atual Ã© de ${vel}Km/h</p>`
+            if(vel > limite){
+                result.innerHTML += `VocÃª estÃ¡ acima do limite de velocidade de ${limite} portanto serÃ¡ multado!`
+            }
             result.innerHTML += `<p>Dirija sempre com cuidado</p>`
         }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -12,63 +12,124 @@
         body{
             font-family: 'Cinzel', serif;
             text-align: center;
+            font-weight: bolder;
+            background-color: #909090
         }
         body form fieldset p{
             border: dashed 1px #000;
             padding: 15px 5px;
         }
         body form fieldset{
-            display: block;
             margin: 20px auto;
+            text-align: left;
         }
-        form{
+
+        body form fieldset input{
+            float: right;
+        
+        }
+        
+        body h1{
+            color: yellow
+        }
+
+        body form{
+            position: absolute;
             border: 1px solid #000;
             padding: 15px;
-            background-color: rgb(152, 243, 243);
-            width: 470px;
+            background-color: rgb(0, 154, 192);
+            width: 500px;
+            margin: 0px;
+            color: #fcf93e;
+            font-size: 18px
         }
-
-
         
+
         input{
             background-color: #f0f0f0;
             line-height: 20px; 
         }
+
+        div#duelostart{
+            font-weight: bold;
+            border: solid 0px black;
+            background-color: #e7e422;
+            font-size: 15px
+        }
+
+        body aside{
+            position: relative;
+            size: auto;
+            display: block;
+            width:25% 50%;
+            border: 1px solid #000;
+            float: right;
+            background-color: #c0bd00
+        }
+        
+        body aside div table tr{
+            width: 100%
+        }
+
+        body aside div table tr td{
+            margin: 100px;
+            width: 290px;
+            background-color: #679cff;
+            border: solid 1px #000;
+            text-align: center;
+            padding: 30px;
+            
+        }
     
     </style>
 </head>
-<body>
+<body>    
+
+    <h1>Yu-Gi-Oh DUELO</h1>
+
+    <aside>
+        <div id="duelostart"></div>
+
+        <div id="PV">
+            <table>
+                <tr>
+                    <td id="PVJ1">Pontos de vida:<br>8000</td>
+                    <td id="PVJ2">Pontos de vida:<br>8000</td>
+                </tr>
+            </table>
+        </div>
+        <div>IMAGEM</div>
+    </aside>
 
     <form>
             <fieldset id="usuario1"><legend>Dados do Duelista</legend>
                 <p>Digite o nome do Duelista: <input placeholder="Yugi Muto" type="text" size="20" maxlength="25" name="duelista1" id="duelista1"/></p>
                 <p>Qual o tipo do Baralho: <input placeholder="Mago Negro, Exodia, etc..." type="text" size="20" maxlength="25" name="baralho1" id="baralho1"/></p>
             </fieldset>
-            <fieldset id="usuario2"><legend>Dados do Duelista</legend>
-                <p>Digite o nome do Duelista: <input placeholder="Seto Kaiba" type="text" name="duelista2" id="duelista2"/></p>
-                <p>Qual o tipo do Baralho: <input placeholder="Dragão Branco, Cyber, etc..." type="text" name="baralho2" id="baralho2"/></p>
+            <fieldset id="usuario1"><legend>Dados do Duelista</legend>
+                <p>Digite o nome do Duelista: <input placeholder="Seto Kaiba" type="text" size="20" maxlength="25" name="duelista2" id="duelista2"/></p>
+                <p>Qual o tipo do Baralho: <input placeholder="Dragão Branco, Cyber, etc..." type="text" size="20" maxlength="25" name="baralho2" id="baralho2"/></p>
             </fieldset>
-            <input type="button" value="Enviar Dados" onclick="Duelista()"/>
-
+            <input type="button" value="Enviar" onclick="enviar()">
     </form>
 
-    <div class="duelostart">
-
-    </div>
 
     <script>
-        var user01 = window.document.getElementById('duelista1')
-        var user02 = window.document.getElementById('duelista2')
-        var retorno = window.document.getElementById('duelostart')
+        var escrever = document.querySelector('div#duelostart')
+        var nome1 = document.getElementById('duelista1')
+        var deck1 = document.getElementById('baralho1')
+        var nome2 = document.getElementById('duelista2')
+        var deck2 = document.getElementById('baralho2')
 
-        function Duelo(){
-            var limite = toString(user01.value)
-            var vel = toString(user02.value)
-            result.innerHTML = `<p>Sua velocidade atual é de ${vel}Km/h</p>`
-            result.innerHTML += `Você está acima do limite de velocidade de ${limite} portanto será multado!`
-            result.innerHTML += `<p>Dirija sempre com cuidado</p>`
+        function enviar(){
+            var named1 = (nome1.value)
+            var nomedeck1 = (deck1.value)
+            var nomed2 = (nome2.value)
+            var nomedeck2 = (deck2.value)
+            
+            escrever.innerHTML = `<p style="padding: 15px; border: solid 1px #000;  margin: auto;">O duelo será entre o duelista: ${named1}, utilizando o baralho: ${nomedeck1}, <br/>Contra o duelista: ${nomed2}, utilizando o baralho: ${nomedeck2}.</p>`
         }
-
+    
     </script>
 </body>
 </html>
